@@ -195,8 +195,3 @@ Contributions are welcome! Feel free to open issues and pull requests. If you'd 
 
 ## **📌 License**
 This project is licensed under the MIT License.
-
----
-
-## **📌 Acknowledgments**
-Special thanks to the open-source tools and CTF communities that inspire this project! 🎯
