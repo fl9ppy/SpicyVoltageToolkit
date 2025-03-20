@@ -1,0 +1,12 @@
+.idea
+ctftool
+*.o
+*.d
+*~
+logs/
+*.log
+/tmp/
+*.swp
+Scripts/*.pyc
+Scripts/__pycache__/
+config/*.conf
