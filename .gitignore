@@ -10,3 +10,4 @@ logs/
 Scripts/*.pyc
 Scripts/__pycache__/
 config/*.conf
+cmake-build-debug
