@@ -34,7 +34,7 @@ void installDependencies() {
 
     loadingEffect("Checking and Installing Dependencies");
 
-    runCommand("sudo apt update && sudo apt install -y nmap sqlmap gobuster steghide binwalk john exiftool hydra hashcat linpeas winpeas rot13 hash-identifier amass theharvester sublist3r");
+    runCommand("sudo apt update && sudo apt install -y nmap sqlmap gobuster steghide binwalk john exiftool hydra hashcat hash-identifier amass theharvester sublist3r");
 
     ofstream outfile(DEPENDENCY_FILE);
     outfile << "installed";

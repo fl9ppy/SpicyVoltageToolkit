@@ -7,7 +7,6 @@
 using namespace std;
 namespace fs = std::filesystem;
 
-// Function to display the Scripts menu
 void scriptsMenu() {
     int choice;
     while (true) {
@@ -45,7 +44,6 @@ void scriptsMenu() {
     }
 }
 
-// Function to list all available scripts in the "Scripts/" directory
 void listScripts() {
     cout << CYAN << "\nAvailable Scripts:\n" << RESET;
     string path = "Scripts/";
@@ -67,7 +65,6 @@ void listScripts() {
     }
 }
 
-// Function to execute a script
 void runScript(const string& scriptName) {
     string fullPath = "Scripts/" + scriptName;
 
@@ -78,19 +75,18 @@ void runScript(const string& scriptName) {
 
     loadingEffect("Executing " + scriptName);
 
-    // Determine file extension and execute accordingly
-    if (scriptName.ends_with(".sh")) {
+    if (scriptName.size() >= 3 && scriptName.compare(scriptName.size() - 3, 3, ".sh") == 0) {
         runCommand("bash " + fullPath);
-    } else if (scriptName.ends_with(".py")) {
+    } else if (scriptName.size() >= 3 && scriptName.compare(scriptName.size() - 3, 3, ".py") == 0) {
         runCommand("python3 " + fullPath);
-    } else if (scriptName.ends_with(".pl")) {
+    } else if (scriptName.size() >= 3 && scriptName.compare(scriptName.size() - 3, 3, ".pl") == 0) {
         runCommand("perl " + fullPath);
     } else {
         runCommand("./" + fullPath);
     }
 }
 
-// Function to add a new script to the "Scripts/" directory
+
 void addScript() {
     string scriptName;
     cout << "Enter new script name (e.g., exploit.py, custom.sh): ";
@@ -111,7 +107,6 @@ void addScript() {
         return;
     }
 
-    // Read script content from user input
     cin.ignore();
     string line;
     while (getline(cin, line)) {
@@ -119,7 +114,7 @@ void addScript() {
     }
 
     scriptFile.close();
-    runCommand("chmod +x " + fullPath); // Make the script executable
+    runCommand("chmod +x " + fullPath);
 
     cout << GREEN << "[+] Script added successfully: " << scriptName << RESET << endl;
 }

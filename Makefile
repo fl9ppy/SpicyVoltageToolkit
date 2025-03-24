@@ -9,7 +9,6 @@ SRC = main.cpp \
       Menus/Crypto.cpp \
       Menus/BruteForce.cpp \
       Menus/OSINT.cpp \
-      Menus/Hints.cpp \
       Menus/ScriptsManager.cpp
 
 HEADERS = Headers/SystemUtils.h \

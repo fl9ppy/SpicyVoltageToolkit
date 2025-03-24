@@ -53,3 +53,9 @@ void mainMenu() {
         waitForEnter();
     }
 }
+
+int main() {
+    installDependencies();
+    mainMenu();
+    return 0;
+}
